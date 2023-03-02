@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+
+        const body = document.querySelector('body')
+
+        const div = document.createElement('div')
+        div.innerHTML = 'Primeiro'
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor')
+        div2.innerHTML = 'segundo'
+
+        const div3 = document.createElement('div')
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        div3.appendChild(p)
+
+
+        body.appendChild(div)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+
+        // ...
+    </script>
+</body>
+
+</html>

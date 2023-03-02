@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pixel';
+}
+
+[wm-flappy] {
+  position: relative;
+  height: 700px;
+  width: 900px;
+  background-color: deepskyblue;
+  border: 5px solid dodgerblue;
+  margin: 15px;
+  overflow: hidden;
+}
+
+.Bird {
+  position: absolute;
+  width: 60px;
+  /* calculo para manter a img exatamanete no meio da div pai, então é necessário contar a prtir da metade da imagem */
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
+   /* left: 50%;
+   top: 50%;  */
+
+
+} 
+
+
+.par-de-barreiras {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  top: 0;
+}
+
+.barreira {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.corpo {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 150px;
+  width: 95px;
+  background-image: linear-gradient(90deg, #639301, #a5e82e)
+}
+
+.borda {
+  border: 2px solid black;
+  width: 120px;
+  height: 30px;
+  background-image: linear-gradient(90deg, #639301, #a5e82e)
+}
+
+
+
+
+
+
+
+
+
+
+

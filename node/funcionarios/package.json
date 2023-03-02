@@ -1,0 +1,19 @@
+{
+  "name": "exercicio",
+  "version": "1.0.0",
+  "description": "exercicio de estudo node;js",
+  "main": "funcionarios.js",
+  "scripts": {
+    "start": "nodemon",
+    "start-dev": "nodemon",
+    "test": "abc"
+  },
+  "keywords": [
+    "estudo"
+  ],
+  "author": "GabrielManicucci",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "1.1.3"
+  }
+}

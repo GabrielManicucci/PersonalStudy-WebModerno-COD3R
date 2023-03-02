@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Acessando Atributos #02</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+
+  <body class="conteudo exercicio">
+    <div>
+      <label for="compras">Compras</label>
+      <!-- atributos criados de forma personalizada, para melhor reconhecimento do browser, devem ser escritos com o prefixo "data" -->
+      <ul id="compras" destino="escritório" data-urgencia="5">
+        <li>Café</li>
+        <li>Água</li>
+        <li>Copo Descartável</li>
+      </ul>
+    </div>
+    <script>
+      const lista = document.querySelector("#compras")
+      console.log(lista)
+      console.log("Elemento ul...")
+      console.log(lista.childNodes)
+
+      // atributos personalizados não são encontrados plo browser
+      console.log(lista.destino) // retorna undefined
+      console.log(document.querySelectorAll("[destino]"))
+      console.log(lista.getAttribute("destino"))
+      console.log(lista.hasAttribute("destino"))
+
+      // setar(Criar) atributo
+      lista.setAttribute("destino", "empresa")
+      lista.setAttribute("status", "aberto")
+      lista.removeAttribute("destino")
+      console.log(lista.dataset.urgencia) // ou >
+      console.log(lista.getAttribute("data-urgencia"))
+
+      //   label
+      const label = document.querySelector("label")
+      console.log("elemento label...")
+      console.log(label)
+      // atributos próprios do html devem ser chamados com o prefixo "html"
+      console.log(label.for)
+      console.log(label.htmlFor)
+      // ALterando atributo
+      lista.dataset.urgencia = "6"
+
+      // ...
+    </script>
+  </body>
+</html>

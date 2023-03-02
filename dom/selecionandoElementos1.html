@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+      document.getElementById("primeiro").classList.add("destaque")
+
+      // "getElements" pega os elementos seja por tags ou classes e adiciona em um HTMLCollection, que não é um array, sendo necessário transformar para um array
+      const divs = document.getElementsByTagName("div")
+
+      // Forma de transformar "HTMLCollection" em array
+      Array.from(divs).forEach(e => e.classList.remove("destaque"))
+
+      //  Segunda forma: operador "..."
+      const divsArray = [...divs]
+      divsArray.forEach(e => e.classList.add("destaque"))
+
+      //  Terceira forma
+      const ultimoElemento = document.getElementsByClassName("ultimo")
+      for (let e of ultimoElemento) {
+        e.classList.remove("destaque")
+      }
+
+      const body = document.querySelector('body')
+      const div1 = document.createElement('div')
+      div1.innerHTML = 'Quarto'
+      body.appendChild(div1)
+      div1.setAttribute('elemento', 4)
+
+      Array.from(divs).forEach( e => e.classList.remove('destaque'))
+
+      
+
+
+
+
+      // ...
+    </script>
+  </body>
+</html>

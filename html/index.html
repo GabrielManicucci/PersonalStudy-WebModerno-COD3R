@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <style>
+      body {
+        padding: 20px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 90px;
+      }
+
+      a {
+        padding: 20px;
+      }
+
+      section a {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+      }
+
+      main {
+        border: 2px solid;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: darkgray;
+        padding: 20px;
+      }
+
+      /* form {
+        display: flex;
+        flex-direction: column;
+      } */
+
+      input {
+        display: block;
+        height: 24px;
+        margin-bottom: 10px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        display: inline;
+      }
+
+      input[type="checkbox"] {
+        margin-bottom: 20px;
+      }
+
+      select {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      button {
+        margin-top: 20px;
+        display: block;
+        height: 29px;
+        width: 70px;
+      }
+    </style>
+
+    <nav>
+      <header>
+        <h1>Exercícios HTML</h1>
+      </header>
+      <div class="menu">
+        <a wm-nav href="exercicios/teste.html">01 - Teste</a>
+        <a wm-nav href="exercicios/Teste2.html">02 - Teste2</a>
+        <a wm-nav href="exercicios/links.html">03 - Links</a>
+        <a wm-nav href="form/form.html">04 - Formulário</a>
+      </div>
+    </nav>
+
+    <section id="conteudo"></section>
+    <br />
+    <br />
+
+    <footer>Curso Web Moderno - COD3RS</footer>
+
+    <script>
+      // Requisição AJAX
+      // Adicionando conteúdo dos arquivos contidos na pasta exercicos para a section de id igual a conteudo com requisiões ajax(promises) e http-server
+
+      document.querySelectorAll("a").forEach(link => {
+        const conteudo = document.getElementById("conteudo")
+
+        // função que intercepta o click, previni o evento padrão e adiciona conteúdo html dentro da section por meio da método fetch que é uma promise.
+        link.onclick = function (e) {
+          e.preventDefault()
+
+          fetch(link.href)
+            .then(response => response.text())
+            .then(html => (conteudo.innerHTML = html))
+        }
+      })
+    </script>
+  </body>
+</html>
