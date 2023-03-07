@@ -16,6 +16,23 @@ pessoa2.lastName = "Manicucci"
 
 console.log(pessoa2)
 
+
+// Existem duas formas de acessar um objeto: notação ponto (.) e colchetes[]
+  // Colchetes serve para acessr objetos a partir de variáveis. Ex:
+  const person = {
+    name: 'Gabriel',
+    lastName: 'Manicucci'
+  }
+
+  function acessarObjeto(objeto, nomeDaPropriedade) {
+    return objeto[nomeDaPropriedade]
+  }
+  console.log(acessarObjeto(person, "name"))
+
+
+
+
+
 // 03) Função factory 
 
 const funFactory = (nome, preco) => {
