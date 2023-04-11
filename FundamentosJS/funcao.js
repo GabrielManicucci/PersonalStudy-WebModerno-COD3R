@@ -25,7 +25,7 @@ const functionArrow = (g, h) => {
 
 console.log(functionArrow(2, 1))
 
-// RETORNO IMPLÍCITO (usado em funções que não possuem bloco de código)
+// RETORNO IMPLÍCITO (usado em funções arrow)
 const returnImp = (i, j) => i - j
 console.log(returnImp(10, 5))
 
