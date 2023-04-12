@@ -1,5 +1,4 @@
 const http = require("http")
-const { reject } = require("lodash")
 
 // Pegar os dados de um json através de uma requisição
 
@@ -44,6 +43,7 @@ Promise.all( [getData('A'), getData('B'), getData('C')] )
       console.log(nomes)
     })
     .catch(e => console.log(e.message))
+    .finally( () => console.log('promisses executadas'))
    
 
     
