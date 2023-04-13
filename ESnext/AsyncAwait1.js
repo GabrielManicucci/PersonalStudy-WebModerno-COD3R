@@ -1,4 +1,4 @@
-// Função de async e await é tornar um código que é assíncrono (usando promisses), em um código mais parecido com a forma síncrona
+// Função de async e await é tornar um código que é assíncrono (usando promisses), em um código mais parecido com a forma síncrona,em que uma sequência de código com funções await, a próxima só será executada com a execução da função(await) anterior 
 
 const { error } = require("console")
 const http = require("http")
