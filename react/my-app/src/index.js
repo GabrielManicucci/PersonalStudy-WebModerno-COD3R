@@ -4,10 +4,11 @@ import React from 'react'
 // Módulo do node responsável por controlar a DOM no react
 import ReactDOM from 'react-dom'
 import Primeiro from './components/Primeiro'
-import Second from './components/Props'
+import Props from './components/Props'
 
 // componentes exporttados de maneira default não precisam de destructuring
 import Default, {ExportNormal, BoaTarde} from './components/Exports'
+import ClassComponent from './components/ClassComponent'
 
 // JSX é ama extensão da linguagem JavaScript no react onde se usa "html" com JavaScript, e é traduzida em javascript em tempo de execução
 
@@ -20,11 +21,13 @@ ReactDOM.render(
     <Primeiro />
 
     {/* It is possible to write data to components with attributes, where the component receives data as a parameter, as shown in the example below and in your file. */}
-    <Second  nome="Manicucci" />
+    <Props  nome="Manicucci" />
 
     <Default export='default' />
     <ExportNormal export='normal' />
     <BoaTarde />
+
+    <ClassComponent tipo='Bom dia' nome='João' />
   </>,
    document.getElementById('root')
 )
