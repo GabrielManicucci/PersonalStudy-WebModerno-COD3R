@@ -9,6 +9,8 @@ import Props from './components/Props'
 // componentes exporttados de maneira default não precisam de destructuring
 import Default, {ExportNormal, BoaTarde} from './components/Exports'
 import ClassComponent from './components/ClassComponent'
+import Pai from './components/Pai'
+// import Filho from './components/Filho'
 
 // JSX é ama extensão da linguagem JavaScript no react onde se usa "html" com JavaScript, e é traduzida em javascript em tempo de execução
 
@@ -28,6 +30,12 @@ ReactDOM.render(
     <BoaTarde />
 
     <ClassComponent tipo='Bom dia' nome='João' />
+
+    <Pai nome='Fernando' sobrenome='Manicucci'>
+      {/* <Filho nome='Gabriel' sobrenome='Manicucci'/>
+      <Filho nome='Fernando' sobrenome='Manicucci'/>
+      <Filho nome='Débora' sobrenome='Manicucci'/> */}
+    </Pai>
   </>,
    document.getElementById('root')
 )

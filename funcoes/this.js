@@ -29,6 +29,7 @@ people.sayNameAge()
 // evita erros e bugs
 // Proíbe algumas sintaxes
 // No brownser é preciso ativa-lo com "use strict"
+// No bronwser o thi aponta para o elemento que foi usado para disparar um evento
 
 
 // escopo global

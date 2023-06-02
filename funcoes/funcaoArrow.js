@@ -10,7 +10,7 @@ const funcaoArrowRetornoImplicito = () => console.log('Esta é uma função arro
 funcaoArrowRetornoImplicito()
 
 
-// Uma função arrow carrega consigo o contexto léxico na qual foi criada, desa forma o this sempre aponta para o mesmo valor, e não pode ser alterada, nem mesmo com bind
+// Uma função arrow carrega consigo o contexto léxico na qual foi criada, desa forma o this sempre aponta para o mesmo valor, que no caso do backEnd aponta para o módulo e não pode ser alterada, nem mesmo com bind
 
 function comparaComThis (param) {
   console.log( this === param)
